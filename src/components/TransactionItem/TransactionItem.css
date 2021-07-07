@@ -1,0 +1,15 @@
+.transactionItem {
+  width: 100%;
+  display: flex;
+}
+
+.transactionTitle {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.transactionSubTitle {
+  font-size: 12px;
+  line-height: 10px;
+  color: grey;
+}

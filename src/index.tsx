@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Typography } from '@ncr-design-system/react';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Typography>
+      <App />
+    </Typography>
   </React.StrictMode>,
   document.getElementById('root')
 );

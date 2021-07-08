@@ -1412,6 +1412,14 @@
     "@types/react" ">= 16"
     "@types/react-dom" ">= 16"
 
+"@ncr-design-system/theme-utils@^0.0.26":
+  version "0.0.26"
+  resolved "https://ncr.jfrog.io/artifactory/api/npm/cxd-npm-releases/@ncr-design-system/theme-utils/-/@ncr-design-system/theme-utils-0.0.26.tgz#126e87ae54c9105c9e4caad2c390872fbfa828e3"
+  integrity sha1-Em6HrlTJEFyeTKrSw5CHL7+oKOM=
+  dependencies:
+    color-string "^1.5.4"
+    hsluv "^0.1.0"
+
 "@nodelib/fs.scandir@2.1.4":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.4.tgz#d4b3549a5db5de2683e0c1071ab4f140904bbf69"
@@ -5485,6 +5493,11 @@ hsla-regex@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/hsla-regex/-/hsla-regex-1.0.0.tgz#c1ce7a3168c8c6614033a4b5f7877f3b225f9c38"
   integrity sha1-wc56MWjIxmFAM6S194d/OyJfnDg=
+
+hsluv@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/hsluv/-/hsluv-0.1.0.tgz#29f40d49642bd56dd0c192122abcc723bb5c2d6c"
+  integrity sha512-ERcanKLAszD2XN3Vh5r5Szkrv9q0oSTudmP0rkiKAGM/3NMc9FLmMZBB7TSqTaXJfSDBOreYTfjezCOYbRKqlw==
 
 html-comment-regex@^1.1.0:
   version "1.1.2"

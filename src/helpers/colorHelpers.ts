@@ -10,7 +10,7 @@ export const handleColorInput = (color: string) => {
   } else if (validateNCRColor(color)) {
     return NCRColorList[color];
   } else {
-    return "#000";
+    return "#5565FD";
   }
 };
 

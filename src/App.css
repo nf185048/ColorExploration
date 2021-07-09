@@ -6,3 +6,8 @@
   box-shadow: 8px 16px 40px rgba(0, 0, 0, 0.12);
   width: 65%;
 }
+
+.interfaceContainer {
+  margin: 2em auto;
+  display: block;
+}

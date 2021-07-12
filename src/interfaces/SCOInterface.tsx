@@ -4,68 +4,84 @@ import { Badge, Button, Grid, Item, Typography } from '@ncr-design-system/react'
 import * as Theme from '@ncr-design-system/theme-utils'
 import './style.css'
 import { Cart } from '../assets'
+import { NCRShades } from '../types'
 
 export const SCOInterface: FC<{
   UIPrimary?: Theme.ColorBase
+  UIPrimaryShade?: NCRShades
   UISecondary?: Theme.ColorBase
+  UISecondaryShade?: NCRShades
   UIFill?: Theme.ColorBase
+  UIFillShade?: NCRShades
   UIBorder?: Theme.ColorBase
+  UIBorderShade?: NCRShades
   UIText?: Theme.ColorBase
+  UITextShade?: NCRShades
 }> = (
   {
     UIPrimary = Theme.generateColor({ main: '#5565FD', type: 'light' }),
+    UIPrimaryShade = 5,
     UISecondary = Theme.generateColor({ main: '#008FB2', type: 'light' }),
+    UISecondaryShade = 5,
     UIFill = Theme.generateColor({ main: 'rgba(116, 116, 128, 0.08)', type: 'light' }),
+    UIFillShade = 5,
     UIBorder = Theme.generateColor({ main: 'rgba(60, 60, 67, 0.13)', type: 'light' }),
+    UIBorderShade = 5,
     UIText = Theme.generateColor({ main: '#000000', type: 'light' }),
+    UITextShade = 5,
   }) => {
 
     const SCOContainer = {
       width: '400px',
       height: '620px',
       display: 'block',
+      backgroundColor: UIFill[UIFillShade as NCRShades],
       boxShadow: '0px 3px 3px rgba(0, 0, 0, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 1px 8px rgba(0, 0, 0, 0.2)'
     }
 
     const SCOHeader = {
-      backgroundColor: UIPrimary[20],
+      backgroundColor: UIPrimary[UIPrimaryShade as NCRShades],
       width: '100%',
       height: '80px',
-      border: `1px solid ${UIPrimary[20]}`,
-      padding: '0.5em 1em 0 1em'
+      border: `1px solid ${UIPrimary[UIPrimaryShade as NCRShades]}`,
+      padding: '1.0em 1em 0 1em'
     }
 
     const shoppingCartList = {
       margin: '1.5em 0',
-      color: UIText[90],
+      color: UIText[UITextShade as NCRShades],
     }
 
     const primaryButton = {
-      backgroundColor: UISecondary[50]
+      backgroundColor: UISecondary[UISecondaryShade as NCRShades]
     }
 
     const smallDivider = {
-      border: `1px solid ${UIBorder[5]}`,
+      border: `1px solid ${UIBorder[UIBorderShade as NCRShades]}`,
       width: '80%',
       margin: 'auto'
     }
 
     const secondaryText = {
-      color: UISecondary[50]
+      color: UISecondary[UISecondaryShade as NCRShades]
     }
 
     const bigDivider = {
-      color: UISecondary[50],
-      border: `2px solid ${UIBorder[10]}`,
+      color: UISecondary[UISecondaryShade as NCRShades],
+      border: `2px solid ${UIBorder[UIBorderShade as NCRShades]}`,
       margin: 'auto'
     }
 
     const paymentButton = {
       width: '95%',
       display: 'flex',
-      marginTop: '0.25em'
+      marginTop: '0.25em',
+      backgroundColor: UISecondary[UISecondaryShade as NCRShades]
     }
 
+    const icon = {
+      stroke: 'red'
+    }
 
     return (
       <Grid container style={SCOContainer}>
@@ -74,7 +90,7 @@ export const SCOInterface: FC<{
         <Grid container style={SCOHeader} justify='space-between' alignItems='flex-start'>
           <Grid item>
             <Button variant='text'>
-              <Cart />
+              <Cart style={icon} />
               <Badge style={primaryButton} variant='counter' counter={1}></Badge>
             </Button>
           </Grid>

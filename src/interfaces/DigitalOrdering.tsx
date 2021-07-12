@@ -4,17 +4,17 @@ import { Grid } from '@ncr-design-system/react'
 import * as Theme from '@ncr-design-system/theme-utils'
 import { NCRShades } from '../types'
 
-export const TestingInterface: FC<{
+export const DigitalOrdering: FC<{
   UIPrimary?: Theme.ColorBase
-  UIPrimaryShade?: number
+  UIPrimaryShade?: NCRShades
   UISecondary?: Theme.ColorBase
-  UISecondaryShade?: number
+  UISecondaryShade?: NCRShades
   UIFill?: Theme.ColorBase
-  UIFillShade?: number
+  UIFillShade?: NCRShades
   UIBorder?: Theme.ColorBase
-  UIBorderShade?: number
+  UIBorderShade?: NCRShades
   UIText?: Theme.ColorBase
-  UITextShade?: number
+  UITextShade?: NCRShades
 }> = (
   {
     UIPrimary = Theme.generateColor({ main: '000', type: 'light' }),
@@ -39,11 +39,11 @@ export const TestingInterface: FC<{
     return (
       <Grid container justify='space-evenly' className='sampleContainer'>
         <Grid container >
-          <Grid item xs={2} style={Box(UIPrimary[UIPrimaryShade as NCRShades])}></Grid>
-          <Grid item xs={2} style={Box(UIFill[UIFillShade as NCRShades])}></Grid>
-          <Grid item xs={2} style={Box(UIBorder[UIBorderShade as NCRShades])}></Grid>
-          <Grid item xs={2} style={Box(UISecondary[UISecondaryShade as NCRShades])}></Grid>
-          <Grid item xs={2} style={Box(UIText[UITextShade as NCRShades])}></Grid>
+          <Grid item xs={2} style={Box(UIPrimary[UIPrimaryShade])}></Grid>
+          <Grid item xs={2} style={Box(UIFill[UIFillShade])}></Grid>
+          <Grid item xs={2} style={Box(UIBorder[UIBorderShade])}></Grid>
+          <Grid item xs={2} style={Box(UISecondary[UISecondaryShade])}></Grid>
+          <Grid item xs={2} style={Box(UIText[UITextShade])}></Grid>
         </Grid>
       </Grid>
     )

@@ -3,7 +3,7 @@ import type { FC } from 'react'
 import { ISelectedValue } from '@ncr-design-system/core'
 import { Select, Option, Label, Grid, Tab, Tabs, Typography } from '@ncr-design-system/react'
 import './App.css'
-import { SCOInterface, SCOWelcome } from './interfaces'
+import { SCOInterface, SCOWelcome, TestingInterface } from './interfaces'
 import * as Theme from '@ncr-design-system/theme-utils'
 import { handleColorInput } from './helpers'
 import { NCRShades, ThemeInput } from './types'
@@ -59,9 +59,6 @@ const App: FC<{}> = () => {
         <Typography variant='title1'>
           NCR Color Book
         </Typography>
-        <Typography variant='body'>
-          Select different hues to test color schemas.
-        </Typography>
       </Grid>
 
       <Grid item xs={4}>
@@ -102,11 +99,19 @@ const App: FC<{}> = () => {
         hideTrack
         value={sampleInterface}
       >
+        {/* <Tab value='sample'>Sample</Tab> */}
         <Tab value='sco'>SCO | Cart</Tab>
         <Tab value='scoWelcome'>SCO | Welcome</Tab>
       </Tabs>
 
       <Grid container className='interfaceContainer'>
+
+
+        {/* {(sampleInterface === 'sample') && (
+          <TestingInterface
+            theme={themeInput}
+          />
+        )} */}
         {(sampleInterface === 'sco') && (
           <SCOInterface
             UIPrimary={themeInput.UIPrimary}

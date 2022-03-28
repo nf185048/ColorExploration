@@ -1,7 +1,8 @@
-import { Button, Colorpicker, Grid, InputWrapper } from "@ncr-design-system/react";
+import { Button, Grid, InputWrapper } from "@ncr-design-system/react";
 import { Eyedrop } from '../assets'
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { NCRShades } from "../types";
+import { Colorpicker } from '@ncr-design-system/react'
 
 export const useColorInput = (colorInputPlaceholder: string, shadeInputPlaceholder: string) => {
   const [color, setColor] = useState("")
@@ -16,7 +17,7 @@ export const useColorInput = (colorInputPlaceholder: string, shadeInputPlacehold
   const input = (
     <>
       <Grid container justify='center' alignItems='center'>
-        <Grid item xs={2}>
+        <Grid item xs={3}>
           <Colorpicker onClick={(e) => handleClick(e)}>
             {/* <Colorpicker> */}
             <Button variant='outline'>
@@ -36,7 +37,7 @@ export const useColorInput = (colorInputPlaceholder: string, shadeInputPlacehold
             />
           </InputWrapper>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={3}>
           <InputWrapper>
             <input
               id='input'
